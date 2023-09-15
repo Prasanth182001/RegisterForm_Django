@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="con">
+<h2>Hi! , <span>{{user.username}}</span></h2>
+<h1>Welcome To My World !!</h1>
+
+<div class="href but click"><a href="{% url 'LOGIN' %}" >Signup</a></div>
+</div>
+
+{% endblock %}

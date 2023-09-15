@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+
+
+{% block content %}
+
+<div class="container">
+    <form method="POST" autocomplete="off" >
+        <h1>Signup</h1>
+<h3>
+{% if messages %}
+    {% for mess in messages %}
+         {{mess}}
+    {% endfor %}
+{% endif %}
+</h3>
+    <div class="con">
+    {% for i in form %}
+    {{i.label}}
+    {{i}}
+    {% endfor %}
+    </div>
+    {% csrf_token %}
+    <button type="submit"  class="but">Signup</button>
+</form>
+</div>
+
+
+{% endblock %}
